@@ -1,0 +1,136 @@
+@bgColor: #3e3e3e;
+@font-color: #000;
+@font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; 
+@bgHead : rgb(39,73,122);
+@bgNav : #eee;
+@width: 100%
+
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html, body {
+	border: 0;
+	font-family: @font-family;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  caption, th, td {
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+ul li {
+    list-style-type: none;
+}
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+    background: @bgColor;
+    color: @font-color;
+    font-family: @font-family;
+}
+.container {
+    header {
+        background: @bgHead;
+        height: 60px;
+        .logo {
+            color: #eee;
+            font-size: 30px;
+            padding: 5px 20px;
+        }
+    }
+    aside {
+        width: 15%;
+        float: left;
+        background: @bgNav;
+        padding: 50px 20px 20px 20px;
+        nav {
+            ul {
+                li {
+                    width: 100%;
+                    padding: 10px 20px;
+                    height: 10px;
+                }  
+                li:hover{
+                        text-decoration: underline;
+                } 
+            }
+        }
+        @media screen {
+            @media(max-width: 520px) {
+                display: none;
+            }
+        }
+    }
+    section.main-content {
+        float: left;
+        width: 75%;
+        h1 {
+            font-family: @font-family
+        }
+    }
+    footer {
+        height: 50px;
+        padding: 10px 50px;
+        float: left;
+        width:93.5%;
+        background: @bgNav;
+        div.copyright {
+            font-size: 12px;
+            float: left;
+        }
+        nav {
+            float: right;
+            ul {
+                li {
+                    float: left;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

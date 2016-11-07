@@ -1,0 +1,188 @@
+@width : 100%
+
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html, body {
+  border: 0;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+ul li {
+  list-style-type: none;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+body {
+  background: #3e3e3e;
+  color: #000;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container header {
+  background: #27497a;
+  height: 60px;
+}
+.container header .logo {
+  color: #eee;
+  font-size: 30px;
+  padding: 5px 20px;
+}
+.container aside {
+  width: 15%;
+  float: left;
+  background: #eee;
+  padding: 50px 20px 20px 20px;
+}
+.container aside nav ul li {
+  width: 100%;
+  padding: 10px 20px;
+  height: 10px;
+}
+.container aside nav ul li:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 520px) {
+  .container aside {
+    display: none;
+  }
+}
+.container section.main-content {
+  float: left;
+  width: 75%;
+}
+.container section.main-content h1 {
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container footer {
+  height: 50px;
+  padding: 10px 50px;
+  float: left;
+  width: 93.5%;
+  background: #eee;
+}
+.container footer div.copyright {
+  font-size: 12px;
+  float: left;
+}
+.container footer nav {
+  float: right;
+}
+.container footer nav ul li {
+  float: left;
+  padding: 5px 10px;
+}
