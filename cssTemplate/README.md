@@ -8,37 +8,37 @@ The Flexible Box Layout model is made for producing layouts and user interfaces 
 The Flexbox family of properties are:
 
 1. flex-direction : row
-    ```
+    
     Value
     a. row - specify that flex items are flowing on the horizontal axis. 
     b. row-reverse - same as row but the direction is reversed. 
     c. column - specify that flex items are flowing on the vertical axis. 
     d. column-reverse - same as column but the direction is reversed.
-    ```
+    
 2. flex-wrap : wrap
-    ```
+    
     Value
     a. nowrap - make flex items stay on a single line 
     b. wrap - make flex items wrap to new lines according to flex item width 
     c. wrap-reverse - reverse the flow of the flex items when they wrap to new lines
-    ```
+    
 3. flex-flow: row wrap
-    ```
+    
     Value
     see flex-direction and flex-wrap
-    ```
+    
 4. order : 1
-    ```
+    
     Value
     integer - specify item order using positive/negative whole number
-    ```
+    
 5. flex: 0 1 100%
-    ```
+    
     Value
     a. none - equates to "0 0 main-size" 
     b. auto - equates to "1 1 main-size" 
     see flex-grow, flex-shrink and flex-basis properties
-    ```
+
 6. flex-grow: 1
     ```
     Value
@@ -52,9 +52,9 @@ The Flexbox family of properties are:
 8. flex-basis: 100%
     ```
     Value
-    a. length - specify a pixel value ( such as 100px ) 
-    b. percentage - specify a percentage value ( such as 50% ) 
-    c. main-size - keyword that gets the main size property
+    - length - specify a pixel value ( such as 100px ) 
+    - percentage - specify a percentage value ( such as 50% ) 
+    - main-size - keyword that gets the main size property
     ```
 9. justify-content: auto
     ```
