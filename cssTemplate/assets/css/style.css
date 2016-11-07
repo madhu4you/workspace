@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  color: #000;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ul li {
+  list-style-type: none;
+  padding: 0;
+}
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+.wrapper header {
+  background: #27497a;
+  order: 1;
+  height: 50px;
+  flex: 0 1 100%;
+  padding: 10px 20px;
+}
+.wrapper header .logo {
+  color: #eee;
+  font-size: 30px;
+  padding: 5px 20px;
+}
+.wrapper aside {
+  background: #eee;
+  order: 2;
+  flex: 0 1 300px;
+  min-height: 500px;
+}
+.wrapper aside nav ul li {
+  width: 100%;
+  padding: 10px 20px;
+  height: 10px;
+}
+.wrapper aside nav ul li:hover {
+  text-decoration: underline;
+}
+.wrapper section.main-content {
+  order: 3;
+  flex: 0 1 auto;
+}
+.wrapper section.main-content h1 {
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media all and (min-width: 800px) {
+  .wrapper section.main-content {
+    flex: 10 0px;
+    order: 2;
+  }
+}
+.wrapper footer {
+  height: 50px;
+  padding: 10px 50px;
+  background: #eee;
+  order: 4;
+  flex: 0 1 100%;
+}
+.wrapper footer div.copyright {
+  font-size: 12px;
+  float: left;
+}
+.wrapper footer nav {
+  float: right;
+}
+.wrapper footer nav ul li {
+  float: left;
+  padding: 5px 10px;
+}
