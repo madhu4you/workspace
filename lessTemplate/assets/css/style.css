@@ -1,188 +1,109 @@
-@width : 100%
-
-/**
- * Global Reset of all HTML Elements
- *
- * Resetting all of our HTML Elements ensures a smoother
- * visual transition between browsers. If you don't believe me,
- * try temporarily commenting out this block of code, then go
- * and look at Mozilla versus Safari, both good browsers with
- * a good implementation of CSS. The thing is, all browser CSS
- * defaults are different and at the end of the day if visual
- * consistency is what we're shooting for, then we need to
- * make sure we're resetting all spacing elements.
- *
- */
-html, body {
-  border: 0;
-  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-}
-div,
-span,
-object,
-iframe,
-img,
-table,
-caption,
-thead,
-tbody,
-tfoot,
-tr,
-tr,
-td,
-article,
-aside,
-canvas,
-details,
-figure,
-hgroup,
-menu,
-nav,
-footer,
-header,
-section,
-summary,
-mark,
-audio,
-video {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-address,
-cit,
-code,
-del,
-dfn,
-em,
-ins,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-b,
-i,
-hr,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-legend,
-label {
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0;
-}
-article,
-aside,
-canvas,
-figure,
-figure img,
-figcaption,
-hgroup,
-footer,
-header,
-nav,
-section,
-audio,
-video {
-  display: block;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-table caption,
-table th,
-table td {
-  text-align: left;
-  vertical-align: middle;
-}
-ul li {
-  list-style-type: none;
-}
-a img {
-  border: 0;
-}
-:focus {
-  outline: 0;
-}
 body {
-  background: #3e3e3e;
+  margin: 0;
   color: #000;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.container header {
-  background: #27497a;
-  height: 60px;
+ul li {
+  list-style-type: none;
+  padding: 0;
 }
-.container header .logo {
+.box-design {
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.wrapper header {
+  background: #27497a;
+  order: 1;
+  height: 50px;
+  flex: 1;
+  padding: 10px 20px;
+}
+.wrapper header .logo {
   color: #eee;
   font-size: 30px;
   padding: 5px 20px;
 }
-.container aside {
-  width: 15%;
-  float: left;
-  background: #eee;
-  padding: 50px 20px 20px 20px;
+.wrapper .main-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  order: 2;
 }
-.container aside nav ul li {
+.wrapper .main-container aside {
+  background: #eee;
+  flex: 1;
+  order: 1;
+  min-height: 500px;
+}
+.wrapper .main-container aside nav ul li {
   width: 100%;
   padding: 10px 20px;
   height: 10px;
 }
-.container aside nav ul li:hover {
+.wrapper .main-container aside nav ul li:hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 520px) {
-  .container aside {
-    display: none;
-  }
+.wrapper .main-container section.main-content {
+  order: 2;
+  flex: 5;
 }
-.container section.main-content {
-  float: left;
-  width: 75%;
-}
-.container section.main-content h1 {
+.wrapper .main-container section.main-content h1 {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.container footer {
+.wrapper .main-container section.main-content .top-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.wrapper .main-container section.main-content .top-content .top-widgets {
+  background: #434343;
+  min-height: 100px;
+  width: 250px;
+  padding: 10px;
+}
+.wrapper .main-container section.main-content .top-content .top-widgets:nth-child(1) {
+  background: #00c0ef;
+}
+.wrapper .main-container section.main-content .top-content .top-widgets:nth-child(2) {
+  background: #dd4b39;
+}
+.wrapper .main-container section.main-content .top-content .top-widgets:nth-child(3) {
+  background: #00a65a;
+}
+.wrapper .main-container section.main-content .top-content .top-widgets:nth-child(4) {
+  background: #f39c12;
+}
+.wrapper footer {
   height: 50px;
   padding: 10px 50px;
-  float: left;
-  width: 93.5%;
   background: #eee;
+  order: 3;
+  flex: 1;
+  display: flex;
 }
-.container footer div.copyright {
+.wrapper footer div.copyright {
   font-size: 12px;
-  float: left;
+  flex: 1;
+  font-size: 16px;
+  margin: auto;
 }
-.container footer nav {
-  float: right;
+.wrapper footer nav {
+  flex: 2;
 }
-.container footer nav ul li {
-  float: left;
+.wrapper footer nav ul li {
   padding: 5px 10px;
+  float: left;
 }

@@ -3,132 +3,121 @@
 @font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; 
 @bgHead : rgb(39,73,122);
 @bgNav : #eee;
-@width: 100%
-
-/**
- * Global Reset of all HTML Elements
- *
- * Resetting all of our HTML Elements ensures a smoother
- * visual transition between browsers. If you don't believe me,
- * try temporarily commenting out this block of code, then go
- * and look at Mozilla versus Safari, both good browsers with
- * a good implementation of CSS. The thing is, all browser CSS
- * defaults are different and at the end of the day if visual
- * consistency is what we're shooting for, then we need to
- * make sure we're resetting all spacing elements.
- *
- */
-html, body {
-	border: 0;
-	font-family: @font-family;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
-}
-
-div, span, object, iframe, img, table, caption, thead, tbody,
-tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
-nav, footer, header, section, summary, mark, audio, video {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
-del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
-ol, ul, li, fieldset, legend, label {
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0;
-}
-
-article, aside, canvas, figure, figure img, figcaption, hgroup,
-footer, header, nav, section, audio, video {
-	display: block;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  caption, th, td {
-    text-align: left;
-    vertical-align: middle;
-  }
-}
-ul li {
-    list-style-type: none;
-}
-a img {
-  border: 0;
-}
-
-:focus {
-  outline: 0;
-}
-
+@width: 100%;
+@aquaColor: #00c0ef;
+@redColor: #dd4b39;
+@greenColor: #00a65a;
+@yellowColor: #f39c12;
 body {
-    background: @bgColor;
+    margin: 0;
     color: @font-color;
     font-family: @font-family;
 }
-.container {
+ul li {
+    list-style-type: none;
+    padding: 0;
+}
+.box-design {
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; 
+    width: 100%;
+    flex-direction: column;
     header {
         background: @bgHead;
-        height: 60px;
+        order: 1;
+        height: 50px;
+        flex:1;
+        padding: 10px 20px;
         .logo {
             color: #eee;
             font-size: 30px;
             padding: 5px 20px;
         }
     }
-    aside {
-        width: 15%;
-        float: left;
-        background: @bgNav;
-        padding: 50px 20px 20px 20px;
-        nav {
-            ul {
-                li {
-                    width: 100%;
-                    padding: 10px 20px;
-                    height: 10px;
-                }  
-                li:hover{
-                        text-decoration: underline;
-                } 
+    .main-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex: 1;
+        order: 2;
+        aside {
+            background: @bgNav;
+            flex: 1;
+            order: 1;
+            min-height: 500px;
+            nav {
+                ul {
+                    li {
+                        width: 100%;
+                        padding: 10px 20px;
+                        height: 10px;
+                        &:hover{
+                            text-decoration: underline;
+                        } 
+                    }  
+                }
             }
         }
-        @media screen {
-            @media(max-width: 520px) {
-                display: none;
+        section.main-content {
+            order: 2;
+            flex: 5;
+            h1 {
+                font-family: @font-family
             }
-        }
-    }
-    section.main-content {
-        float: left;
-        width: 75%;
-        h1 {
-            font-family: @font-family
+            .top-content {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .top-widgets {
+                    background: #434343;
+                    min-height: 100px;
+                    width: 250px;
+                    padding: 10px;
+                     &:nth-child(1) {
+                        background: @aquaColor;
+                    }
+                    &:nth-child(2) {
+                        background: @redColor;
+                    }
+                    &:nth-child(3) {
+                        background: @greenColor;
+                    }
+                    &:nth-child(4) {
+                        background: @yellowColor;
+                    }
+                }
+            }
         }
     }
     footer {
         height: 50px;
         padding: 10px 50px;
-        float: left;
-        width:93.5%;
         background: @bgNav;
+        order: 3;
+        flex:1;
+        display: flex;
         div.copyright {
             font-size: 12px;
-            float: left;
+            flex: 1;
+            font-size: 16px;
+            margin: auto;
         }
         nav {
-            float: right;
+            flex: 2;
             ul {
                 li {
-                    float: left;
                     padding: 5px 10px;
+                    float: left;
                 }
             }
         }
