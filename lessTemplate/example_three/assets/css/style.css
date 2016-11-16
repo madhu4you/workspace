@@ -1,0 +1,22 @@
+#container {
+  display: flex;
+  flex-flow: row wrap;
+}
+#container div {
+  height: 100px;
+}
+#container div#red {
+  background: red;
+  border: 1px solid black;
+  flex: 1;
+}
+#container div#green {
+  background: green;
+  border: 1px solid blue;
+  flex: 1;
+}
+#container div#blue {
+  background: blue;
+  border: 1px solid black;
+  flex-basis: 100%;
+}
