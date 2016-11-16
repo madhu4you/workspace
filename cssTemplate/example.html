@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                min-height: 100vh;
+                justify-content: flex-start;
+                align-content: stretch;
+                margin:0px;
+                padding:0px;
+            }
+            article{
+                flex: 1 1 auto;
+                min-width: 50%;
+            }
+            article:nth-child(1) {
+                background-color: red;
+            }
+            article:nth-child(2) {
+                background-color: yellow;
+            }
+            article:nth-child(3) {
+                background-color: blue;
+            }
+            article:nth-child(4) {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <article>First</article>
+        <article>Second</article>
+        <article>Third</article>
+        <article>Fourth</article>
+    </body>
+</html>
