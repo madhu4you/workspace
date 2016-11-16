@@ -1,0 +1,26 @@
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    li {
+        list-style-type: none;
+        padding: 10px 5px;
+        flex:1;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start; 
+        &:nth-child(4) {
+            border-top: 3px solid #eee;
+            border-bottom: 3px solid #eee;
+        }
+        span{
+            &:nth-child(1) {
+               flex: 1;
+            }
+            &:nth-child(3) {
+               flex-basis: 100%;
+            }
+        }
+    }
+}
