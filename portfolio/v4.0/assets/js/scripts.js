@@ -17,7 +17,6 @@ Author URL: trendytheme.net
     = Magnific Popup
     = Vidio auto play
     = Fit Vids
-    = Google Map
 
 */
 
