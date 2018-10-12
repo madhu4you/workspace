@@ -20,5 +20,5 @@ var twoSum = function(nums, target) {
     }
     return output;
 };
-var nums = [2, 7, 11, 15], target = 9;
-console.log(twoSum(nums, target));
+//var nums = [2, 7, 11, 15], target = 9;
+//console.log(twoSum(nums, target));
