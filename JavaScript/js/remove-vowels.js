@@ -4,7 +4,7 @@ function disemvowel(str) {
   
   //////////////////////////////
   
-  function disemvowel(str) {
+  function removeVowels(str) {
     var vowels = ['a', 'e', 'i', 'o', 'u'];
     
     return str.split('').filter(function(el) {
