@@ -1,0 +1,73 @@
+body {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 100vw;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 20rem auto;
+  grid-gap: 1rem;
+  grid-template-areas: "sidebar maincontent";
+}
+.wrapper .filter {
+  grid-area: sidebar;
+  display: grid;
+  align-items: start;
+}
+.wrapper .filter form {
+  padding: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+.wrapper .filter form > .title {
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.wrapper .filter .fieldset .legend {
+  background-color: #8F8F8F;
+  padding: 1rem;
+}
+.wrapper .filter .fieldset .fields-wrapper {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+.wrapper .filter .fieldset .fields-wrapper .fields {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+.wrapper .filter .fieldset .fields-wrapper .fields .count::before {
+  content: "(";
+}
+.wrapper .filter .fieldset .fields-wrapper .fields .count::after {
+  content: ")";
+}
+.wrapper .vehicle-listing-results {
+  grid-area: maincontent;
+  display: grid;
+  grid-template-rows: 4rem auto;
+  grid-gap: 1rem;
+}
+.wrapper .vehicle-listing-results .toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wrapper .vehicle-listing-results .toolbar .tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: end;
+  justify-content: center;
+}
+.wrapper .vehicle-listing-results .vehicle-listing-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+}
+.wrapper .vehicle-listing-results .vehicle-listing-wrapper.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.wrapper .vehicle-listing-results .vehicle-listing-wrapper.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.wrapper .vehicle-listing-results .vehicle-listing-wrapper.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Card Listing</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/less/grid.css'>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="filter">
+            <form action="#">
+                <div class="title">Filter</div>
+                <div class="fieldset">
+                    <div class="legend">Category</div>
+                    <div class="fields-wrapper">
+                        <button class="clear" type="button">Clear</button>
+                        <div class="fields">
+                            <label for="search-new">
+                                <input type="checkbox" id="search-new" name="search" value="new">
+                                <span>New</span>
+                                <span class="count">719</span>
+                            </label>
+                            <label for="search-certified">
+                                <input type="checkbox" id="search-certified" name="search" value="certified">
+                                <span>Certified Pre‑Owned</span>
+                                <span class="count">1</span>
+                            </label>
+                            <label for="search-preowned">
+                                <input type="checkbox" id="search-preowned" name="search" value="preowned">
+                                <span>Pre-Owned</span>
+                                <span class="count">124</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fieldset">
+                        <div class="legend">Make</div>
+                        <div class="fields-wrapper">
+                            <button class="clear" type="button">Clear</button>
+                            <div class="fields">
+                                <label for="search-chevrolet">
+                                    <input type="checkbox" id="search-chevrolet" name="search" value="chevrolet">
+                                    <span>Chevrolet</span>
+                                    <span class="count">300</span>
+                                </label>
+                                <label for="search-cadillac">
+                                    <input type="checkbox" id="search-cadillac" name="search" value="cadillac">
+                                    <span>Cadillac</span>
+                                    <span class="count">200</span>
+                                </label>
+                                <label for="search-buick">
+                                    <input type="checkbox" id="search-buick" name="search" value="buick">
+                                    <span>Buick</span>
+                                    <span class="count">219</span>
+                                </label>
+                            </div>
+                        </div>
+                </div>
+            </form>
+        </div>
+        <div class="vehicle-listing-results">
+            <div class="toolbar">
+                <div class="title">
+                    <h3>719 Vehicles Found</h3>
+                </div>
+                <div class="tools">
+                    <div class="share">Share</div>
+                    <div class="comapre">Compare</div>
+                    <div class="sort">
+                        <label for="sort">
+                            <select aria-label="Sort By" name="sort" role="listbox" id="sortby" each="content.vehicleSort" merchandising-vehiclesort="">
+                                    <option role="option" value="" selected="selected" disabled="disabled" not="@index">Sort By</option>
+                                    <option role="option" value="salePrice|desc">Price: High To Low</option>
+                                    <option role="option" value="salePrice|asc">Price: Low To High</option>
+                                    <option role="option" value="year|desc">Year: High To Low</option>
+                                    <option role="option" value="year|asc">Year: Low To High</option>
+                                    <option role="option" value="promotionAvailable|desc">Specials</option>
+                                    <option role="option" value="make|desc">Make: Z - A</option>
+                                    <option role="option" value="model|asc">Model: A - Z</option>
+                                    <option role="option" value="model|desc">Model: Z - A</option>
+                                    <option role="option" value="miles|desc">Mileage: High To Low</option>
+                                    <option role="option" value="miles|asc">Mileage: Low To High</option>
+                                    <option role="option" value="hwyMPG|desc">HWY MPG: High To Low</option>
+                                    <option role="option" value="hwyMPG|asc">HWY MPG: Low To High</option>
+                                    <option role="option" value="exterior|asc">Exterior Color: A - Z</option>
+                                    <option role="option" value="exterior|desc">Exterior Color: Z - A</option>
+                                    <option role="option" value="certified|desc">Certified</option>
+                                    <option role="option" value="distance|asc">Distance: Near To Far</option>
+                                    <option role="option" value="savings|desc">Savings: High To Low</option>
+                                </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="vehicle-listing-wrapper col-3">
+                <section class="card vehicle-listing">
+                    <div class="content">
+                        <div class="title">
+                            <h4>
+                                <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                    <span class="condition">New</span>
+                                    <span class="year">2019</span>
+                                    <span class="make">Chevrolet</span>
+                                    <span class="model">Blazer</span>
+                                    <span class="trim">FWD</span>
+                                </a>
+                            </h4>
+                            <ul class="prices">
+                                <li class="primary-price">
+                                    <div class="primary-price">
+                                        <span class="key">Vandergriff Price</span>
+                                        <span class="value ">$30,503</span>
+                                    </div>
+                                </li>
+                                
+                                <li class="secondary-price">
+                                    <div>
+                                        <span class="key">MSRP</span>
+                                        <span class="value">$35,340</span>
+                                    </div>
+                                </li>
+                                <div class="disclaimer">
+                                    <span>See Important Disclosures Here</span>
+                                </div>
+                            </ul>
+                        </div>
+                        <!--Adding Mathbox copy-->
+                        <div class="copy ">
+                            <div class="vehicle-specifications">
+                                <h5 >Specifications</h5>
+                                <ul class="vehicleIdentitySpecs">
+                                    <li class="key-value solid-line">
+                                        <span class="key">Exterior</span>
+                                        <span class="value">Gpa Gray</span>
+                                    </li>
+                                    <li class="key-value solid-line">
+                                        <span class="key">Interior</span>
+                                        <span class="value">H0U/Jet Black</span>
+                                    </li>
+                                    <li class="key-value solid-line">
+                                        <span class="key">Transmission</span>
+                                        <span class="value"><span itemprop="name">9-Speed A/T</span></span>
+                                    </li>
+                                    <li class="key-value solid-line">
+                                        <span class="key">Engine</span>
+                                        <span class="value"><span>2.5L 4 cyl</span></span>
+                                    </li>
+                                    <li class="key-value solid-line">
+                                        <span class="key">Stock Number</span>
+                                        <span class="value">KS680014</span>
+                                    </li>
+                                    <li class="key-value solid-line">
+                                        <span class="key">VIN</span>
+                                        <span class="value">3GNKBBRA4KS680014</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="vehicle-pricing">
+                                <div class="tabContainer">
+                                    <!-- Triple Mathbox -->
+                                    <div class="cash-price">
+                                    <h5>Current Offers</h5>
+                                    <div>
+                                        <ul>
+                                            <!-- Multiple Prices -->
+                                            <li class="msrp solid-line key-value">
+                                                <span class="label key ">
+                                                    MSRP
+                                                </span>
+                                                <span itemprop="price" class="value ">$35,340</span>
+                                            </li>
+                                            <li class="market-adjustment solid-line key-value">
+                                                <div>
+                                                    <span not="description">
+                                                        <span class="key" itemprop="name">Savings</span>
+                                                        <sup if="disclaimerSuperfix">1</sup>
+                                                    </span>
+                                                </div>
+                                                <span class="value" itemprop="price">- $4,837</span>
+                                            </li>
+                                            <li class="discount-price solid-line key-value">
+                                                <span class="label key ">Vandergriff Price</span>
+                                                <span class="value ">$30,503</span>
+                                            </li>
+                                <!-- Final Sale Price -->
+                                        </ul>
+                                    </div>
+                                    <div class="disclaimer">
+                                        <span>Click here for more offer information</span>
+                                        <div>
+                                            <small><span>1</span>See dealer</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="link" template="hyperlinks">
+                            <a class="secondary" name="3532db19-f959-49ca-ba00-9a518823acb2" href="/?indices=site,ContentBlock-PriceWatch&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-watch-3454434063" title="Get price notifications on this vehicle!" target="">Price Watch</a>
+                            <a class="secondary" name="c39ef72f-b90d-4a54-8726-c8c75f9c7615" href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063" title="View details about this vehicle" target="">View Details</a>
+                            <a class="secondary" name="ad05b1b4-cc34-4422-b8db-5cdefb6ca53c" href="/?indices=site,ContentBlock-GetAQuote&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-quote-3454434063" title="" target="">Request a quote</a>
+                        </div>
+                        <div class="media">
+                            <figure>
+                                <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                    <img src="https://inventory-dmg.assets-cdk.com/3/5/9/20040156953.jpg" alt="2019 Chevrolet Blazer Vehicle Photo in Arlington, TX 76017">
+                                </a>
+                                <figcaption>
+                                    <span class="photo-icons">
+                                        <span>35 photos</span>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>  
+                    </div>  
+                </section>
+                <section class="card vehicle-listing">
+                        <div class="content">
+                            <div class="title">
+                                <h4>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <span class="condition">New</span>
+                                        <span class="year">2019</span>
+                                        <span class="make">Chevrolet</span>
+                                        <span class="model">Blazer</span>
+                                        <span class="trim">FWD</span>
+                                    </a>
+                                </h4>
+                                <ul class="prices">
+                                    <li class="primary-price">
+                                        <div class="primary-price">
+                                            <span class="key">Vandergriff Price</span>
+                                            <span class="value ">$30,503</span>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="secondary-price">
+                                        <div>
+                                            <span class="key">MSRP</span>
+                                            <span class="value">$35,340</span>
+                                        </div>
+                                    </li>
+                                    <div class="disclaimer">
+                                        <span>See Important Disclosures Here</span>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!--Adding Mathbox copy-->
+                            <div class="copy ">
+                                <div class="vehicle-specifications">
+                                    <h5 >Specifications</h5>
+                                    <ul class="vehicleIdentitySpecs">
+                                        <li class="key-value solid-line">
+                                            <span class="key">Exterior</span>
+                                            <span class="value">Gpa Gray</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Interior</span>
+                                            <span class="value">H0U/Jet Black</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Transmission</span>
+                                            <span class="value"><span itemprop="name">9-Speed A/T</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Engine</span>
+                                            <span class="value"><span>2.5L 4 cyl</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Stock Number</span>
+                                            <span class="value">KS680014</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">VIN</span>
+                                            <span class="value">3GNKBBRA4KS680014</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vehicle-pricing">
+                                    <div class="tabContainer">
+                                        <!-- Triple Mathbox -->
+                                        <div class="cash-price">
+                                        <h5>Current Offers</h5>
+                                        <div>
+                                            <ul>
+                                                <!-- Multiple Prices -->
+                                                <li class="msrp solid-line key-value">
+                                                    <span class="label key ">
+                                                        MSRP
+                                                    </span>
+                                                    <span itemprop="price" class="value ">$35,340</span>
+                                                </li>
+                                                <li class="market-adjustment solid-line key-value">
+                                                    <div>
+                                                        <span not="description">
+                                                            <span class="key" itemprop="name">Savings</span>
+                                                            <sup if="disclaimerSuperfix">1</sup>
+                                                        </span>
+                                                    </div>
+                                                    <span class="value" itemprop="price">- $4,837</span>
+                                                </li>
+                                                <li class="discount-price solid-line key-value">
+                                                    <span class="label key ">Vandergriff Price</span>
+                                                    <span class="value ">$30,503</span>
+                                                </li>
+                                    <!-- Final Sale Price -->
+                                            </ul>
+                                        </div>
+                                        <div class="disclaimer">
+                                            <span>Click here for more offer information</span>
+                                            <div>
+                                                <small><span>1</span>See dealer</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="link" template="hyperlinks">
+                                <a class="secondary" name="3532db19-f959-49ca-ba00-9a518823acb2" href="/?indices=site,ContentBlock-PriceWatch&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-watch-3454434063" title="Get price notifications on this vehicle!" target="">Price Watch</a>
+                                <a class="secondary" name="c39ef72f-b90d-4a54-8726-c8c75f9c7615" href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063" title="View details about this vehicle" target="">View Details</a>
+                                <a class="secondary" name="ad05b1b4-cc34-4422-b8db-5cdefb6ca53c" href="/?indices=site,ContentBlock-GetAQuote&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-quote-3454434063" title="" target="">Request a quote</a>
+                            </div>
+                            <div class="media">
+                                <figure>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <img src="https://inventory-dmg.assets-cdk.com/3/5/9/20040156953.jpg" alt="2019 Chevrolet Blazer Vehicle Photo in Arlington, TX 76017">
+                                    </a>
+                                    <figcaption>
+                                        <span class="photo-icons">
+                                            <span>35 photos</span>
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </div>  
+                        </div>  
+                </section>
+                <section class="card vehicle-listing">
+                        <div class="content">
+                            <div class="title">
+                                <h4>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <span class="condition">New</span>
+                                        <span class="year">2019</span>
+                                        <span class="make">Chevrolet</span>
+                                        <span class="model">Blazer</span>
+                                        <span class="trim">FWD</span>
+                                    </a>
+                                </h4>
+                                <ul class="prices">
+                                    <li class="primary-price">
+                                        <div class="primary-price">
+                                            <span class="key">Vandergriff Price</span>
+                                            <span class="value ">$30,503</span>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="secondary-price">
+                                        <div>
+                                            <span class="key">MSRP</span>
+                                            <span class="value">$35,340</span>
+                                        </div>
+                                    </li>
+                                    <div class="disclaimer">
+                                        <span>See Important Disclosures Here</span>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!--Adding Mathbox copy-->
+                            <div class="copy ">
+                                <div class="vehicle-specifications">
+                                    <h5 >Specifications</h5>
+                                    <ul class="vehicleIdentitySpecs">
+                                        <li class="key-value solid-line">
+                                            <span class="key">Exterior</span>
+                                            <span class="value">Gpa Gray</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Interior</span>
+                                            <span class="value">H0U/Jet Black</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Transmission</span>
+                                            <span class="value"><span itemprop="name">9-Speed A/T</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Engine</span>
+                                            <span class="value"><span>2.5L 4 cyl</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Stock Number</span>
+                                            <span class="value">KS680014</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">VIN</span>
+                                            <span class="value">3GNKBBRA4KS680014</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vehicle-pricing">
+                                    <div class="tabContainer">
+                                        <!-- Triple Mathbox -->
+                                        <div class="cash-price">
+                                        <h5>Current Offers</h5>
+                                        <div>
+                                            <ul>
+                                                <!-- Multiple Prices -->
+                                                <li class="msrp solid-line key-value">
+                                                    <span class="label key ">
+                                                        MSRP
+                                                    </span>
+                                                    <span itemprop="price" class="value ">$35,340</span>
+                                                </li>
+                                                <li class="market-adjustment solid-line key-value">
+                                                    <div>
+                                                        <span not="description">
+                                                            <span class="key" itemprop="name">Savings</span>
+                                                            <sup if="disclaimerSuperfix">1</sup>
+                                                        </span>
+                                                    </div>
+                                                    <span class="value" itemprop="price">- $4,837</span>
+                                                </li>
+                                                <li class="discount-price solid-line key-value">
+                                                    <span class="label key ">Vandergriff Price</span>
+                                                    <span class="value ">$30,503</span>
+                                                </li>
+                                    <!-- Final Sale Price -->
+                                            </ul>
+                                        </div>
+                                        <div class="disclaimer">
+                                            <span>Click here for more offer information</span>
+                                            <div>
+                                                <small><span>1</span>See dealer</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="link" template="hyperlinks">
+                                <a class="secondary" name="3532db19-f959-49ca-ba00-9a518823acb2" href="/?indices=site,ContentBlock-PriceWatch&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-watch-3454434063" title="Get price notifications on this vehicle!" target="">Price Watch</a>
+                                <a class="secondary" name="c39ef72f-b90d-4a54-8726-c8c75f9c7615" href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063" title="View details about this vehicle" target="">View Details</a>
+                                <a class="secondary" name="ad05b1b4-cc34-4422-b8db-5cdefb6ca53c" href="/?indices=site,ContentBlock-GetAQuote&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-quote-3454434063" title="" target="">Request a quote</a>
+                            </div>
+                            <div class="media">
+                                <figure>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <img src="https://inventory-dmg.assets-cdk.com/3/5/9/20040156953.jpg" alt="2019 Chevrolet Blazer Vehicle Photo in Arlington, TX 76017">
+                                    </a>
+                                    <figcaption>
+                                        <span class="photo-icons">
+                                            <span>35 photos</span>
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </div>  
+                        </div>  
+                </section>
+                <section class="card vehicle-listing">
+                        <div class="content">
+                            <div class="title">
+                                <h4>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <span class="condition">New</span>
+                                        <span class="year">2019</span>
+                                        <span class="make">Chevrolet</span>
+                                        <span class="model">Blazer</span>
+                                        <span class="trim">FWD</span>
+                                    </a>
+                                </h4>
+                                <ul class="prices">
+                                    <li class="primary-price">
+                                        <div class="primary-price">
+                                            <span class="key">Vandergriff Price</span>
+                                            <span class="value ">$30,503</span>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="secondary-price">
+                                        <div>
+                                            <span class="key">MSRP</span>
+                                            <span class="value">$35,340</span>
+                                        </div>
+                                    </li>
+                                    <div class="disclaimer">
+                                        <span>See Important Disclosures Here</span>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!--Adding Mathbox copy-->
+                            <div class="copy ">
+                                <div class="vehicle-specifications">
+                                    <h5 >Specifications</h5>
+                                    <ul class="vehicleIdentitySpecs">
+                                        <li class="key-value solid-line">
+                                            <span class="key">Exterior</span>
+                                            <span class="value">Gpa Gray</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Interior</span>
+                                            <span class="value">H0U/Jet Black</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Transmission</span>
+                                            <span class="value"><span itemprop="name">9-Speed A/T</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Engine</span>
+                                            <span class="value"><span>2.5L 4 cyl</span></span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">Stock Number</span>
+                                            <span class="value">KS680014</span>
+                                        </li>
+                                        <li class="key-value solid-line">
+                                            <span class="key">VIN</span>
+                                            <span class="value">3GNKBBRA4KS680014</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vehicle-pricing">
+                                    <div class="tabContainer">
+                                        <!-- Triple Mathbox -->
+                                        <div class="cash-price">
+                                        <h5>Current Offers</h5>
+                                        <div>
+                                            <ul>
+                                                <!-- Multiple Prices -->
+                                                <li class="msrp solid-line key-value">
+                                                    <span class="label key ">
+                                                        MSRP
+                                                    </span>
+                                                    <span itemprop="price" class="value ">$35,340</span>
+                                                </li>
+                                                <li class="market-adjustment solid-line key-value">
+                                                    <div>
+                                                        <span not="description">
+                                                            <span class="key" itemprop="name">Savings</span>
+                                                            <sup if="disclaimerSuperfix">1</sup>
+                                                        </span>
+                                                    </div>
+                                                    <span class="value" itemprop="price">- $4,837</span>
+                                                </li>
+                                                <li class="discount-price solid-line key-value">
+                                                    <span class="label key ">Vandergriff Price</span>
+                                                    <span class="value ">$30,503</span>
+                                                </li>
+                                    <!-- Final Sale Price -->
+                                            </ul>
+                                        </div>
+                                        <div class="disclaimer">
+                                            <span>Click here for more offer information</span>
+                                            <div>
+                                                <small><span>1</span>See dealer</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="link" template="hyperlinks">
+                                <a class="secondary" name="3532db19-f959-49ca-ba00-9a518823acb2" href="/?indices=site,ContentBlock-PriceWatch&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-watch-3454434063" title="Get price notifications on this vehicle!" target="">Price Watch</a>
+                                <a class="secondary" name="c39ef72f-b90d-4a54-8726-c8c75f9c7615" href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063" title="View details about this vehicle" target="">View Details</a>
+                                <a class="secondary" name="ad05b1b4-cc34-4422-b8db-5cdefb6ca53c" href="/?indices=site,ContentBlock-GetAQuote&amp;pageName=VehicleSearchResults&amp;parentCardId=view/card/945c6768-3cb6-4bff-b587-54d22f0af242-0&amp;id=3454434063#vehicle-quote-3454434063" title="" target="">Request a quote</a>
+                            </div>
+                            <div class="media">
+                                <figure>
+                                    <a href="https://www.vandergriffchevy.com/VehicleDetails/new-2019-Chevrolet-Blazer-FWD-Arlington-TX/3454434063">
+                                        <img src="https://inventory-dmg.assets-cdk.com/3/5/9/20040156953.jpg" alt="2019 Chevrolet Blazer Vehicle Photo in Arlington, TX 76017">
+                                    </a>
+                                    <figcaption>
+                                        <span class="photo-icons">
+                                            <span>35 photos</span>
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </div>  
+                        </div>  
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
